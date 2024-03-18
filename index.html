@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display JSON Data</title>
+</head>
+<body>
+
+<div id="json-display"></div>
+
+<script>
+// Your JSON data
+var jsonData = {
+  "section": {
+    "class": "game-section",
+    "h2": {
+      "class": "line-title",
+      "text": "trending games"
+    },
+    "div": {
+      "class": "owl-carousel custom-carousel owl-theme",
+      "items": [
+        {
+          "class": "item active",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg);",
+          "desc": {
+            "h3": "Dota 2",
+            "p": "Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        },
+        {
+          "class": "item",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/winter-3.jpg);",
+          "desc": {
+            "h3": "The Witcher 3",
+            "p": "The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        },
+        {
+          "class": "item",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/rdr-2.jpg);",
+          "desc": {
+            "h3": "RDR 2",
+            "p": "RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        },
+        {
+          "class": "item",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/pubg.jpg);",
+          "desc": {
+            "h3": "PUBG Mobile",
+            "p": "PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        },
+        {
+          "class": "item",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/fortnite.jpg);",
+          "desc": {
+            "h3": "Fortnite",
+            "p": "Battle royale where 100 players fight to be the last person standing. which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        },
+        {
+          "class": "item",
+          "style": "background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/far-cry-5.jpg);",
+          "desc": {
+            "h3": "Far Cry 5",
+            "p": "Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft. which was a community-created mod for Blizzard Entertainment's Warcraft III."
+          }
+        }
+      ]
+    }
+  }
+};
+
+// Function to display JSON data
+function displayJSON(data, elementId) {
+  var element = document.getElementById(elementId);
+  element.textContent = JSON.stringify(data, null, 2);
+}
+
+// Call the function to display JSON data
+displayJSON(jsonData, 'json-display');
+</script>
+
+</body>
+</html>
